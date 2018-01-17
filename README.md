@@ -27,3 +27,10 @@ To run the programs, Biopython is needed.
          -e   +/- bases to extend bed coordinates (default: 0)
         
 ## Mini comparison of performance
+
+Processing BAM file (size ~2.5Gb)
+Number of entries: ~16,000
+
+quick_mpileup: 6min 5sec
+samtools mpileup (no reference): 1min
+samtools mpileup (with ref): 
