@@ -1,7 +1,9 @@
 use strict; use warnings;
-use Cwd;
-my $dir = getcwd;
 use Cwd 'abs_path';
+my $dir = abs_path($0);
+
+my @temp = split /\//, $dir;
+$dir = join("/", @temp[0..($#temp-1)]);
 
 my $mpiler = "$dir/bin/generate_mpileup_fast.pl";
 my $ref_formatter = "$dir/bin/subNmpileup.py";
